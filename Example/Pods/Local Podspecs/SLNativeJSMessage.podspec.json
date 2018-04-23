@@ -1,0 +1,22 @@
+{
+  "name": "SLNativeJSMessage",
+  "version": "0.1.0",
+  "summary": "A short description of SLNativeJSMessage.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/lishuailibertine/SLNativeJSMessage",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "lishuailibertine": "lishuai@touker.com"
+  },
+  "source": {
+    "git": "https://github.com/lishuailibertine/SLNativeJSMessage.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "SLNativeJSMessage/Classes/**/*"
+}

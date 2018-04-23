@@ -1,0 +1,16 @@
+PODS:
+  - SLNativeJSMessage (0.1.0)
+
+DEPENDENCIES:
+  - SLNativeJSMessage (from `../`)
+
+EXTERNAL SOURCES:
+  SLNativeJSMessage:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SLNativeJSMessage: 266ca99fa3ac0d0086d2a1620a265f32af0b1c3d
+
+PODFILE CHECKSUM: 513e15ef6c11b67679dbb009f61591ab9f2edd75
+
+COCOAPODS: 1.5.0

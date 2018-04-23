@@ -1,0 +1,6 @@
+framework module SLNativeJSMessage {
+  umbrella header "SLNativeJSMessage-umbrella.h"
+
+  export *
+  module * { export * }
+}
