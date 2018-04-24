@@ -10,6 +10,8 @@
 #endif
 #endif
 
+#import "SLBaseWebViewBridge.h"
+#import "SLNativeBaseBridge.h"
 
 FOUNDATION_EXPORT double SLNativeJSMessageVersionNumber;
 FOUNDATION_EXPORT const unsigned char SLNativeJSMessageVersionString[];
