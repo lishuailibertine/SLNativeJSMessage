@@ -11,5 +11,7 @@
 
 -(void)callRouter:(JSValue *)requestObject callBack:(JSValue *)callBack{
     NSLog(@"%@",[requestObject toObject]);
+    [callBack callWithArguments:@[@"h5 你好"]];
+    
 }
 @end

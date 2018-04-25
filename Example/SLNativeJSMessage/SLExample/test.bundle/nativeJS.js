@@ -1,8 +1,4 @@
-(function test() {
-//    function All(){};
-//    All.prototype.a = function() {
-//    };
-//    window.native =new All();
+(function test(w) {
 	var native ={
 		isAndroid_ios:function(){  
 			var u = navigator.userAgent, app = navigator.appVersion;  
@@ -13,11 +9,11 @@
 		callMessage:function(params,callback){
 			if (!this.isAndroid_ios()){
 				console.log("is iOS phone");
-				window.WebViewBridge.callRouter(params);
+				window.WebViewBridge.callRouter(params,callback);
 			}else{
 				console.log("is Android phone");
 			}
 		}
  	};
- 	window.native =native;
-})();
+ 	w._sl_native =native;
+})(window);

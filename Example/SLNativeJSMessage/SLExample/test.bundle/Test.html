@@ -9,6 +9,9 @@
 </body>
 <script type="text/javascript" src="nativeJS.js"></script>
 <script type="text/javascript">
-	native.callMessage("hello world",null);
+	_sl_native.callMessage("原生，你好",function callback(argument) {
+		// body...
+		alert(argument);
+	});
 </script>
 </html>
