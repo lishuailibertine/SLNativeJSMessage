@@ -65,7 +65,7 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C427F0B5BBD681D0F42AF462 /* SLNativeJSMessage.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SLNativeJSMessage.podspec; path = ../SLNativeJSMessage.podspec; sourceTree = "<group>"; };
+		C427F0B5BBD681D0F42AF462 /* SLNativeJSMessage.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SLNativeJSMessage.podspec; path = ../SLNativeJSMessage.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C9FB80E1BC0C0C0E51F051B4 /* Pods_SLNativeJSMessage_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SLNativeJSMessage_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6436A2E9C460C142A613EB0 /* Pods-SLNativeJSMessage_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SLNativeJSMessage_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SLNativeJSMessage_Tests/Pods-SLNativeJSMessage_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		DD0AFE94C93B8413B2059C5C /* Pods-SLNativeJSMessage_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SLNativeJSMessage_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SLNativeJSMessage_Example/Pods-SLNativeJSMessage_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -265,6 +265,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = lishuailibertine;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = QG479838Q3;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -505,6 +508,7 @@
 			baseConfigurationReference = 19F7F2E8C954618B8C380797 /* Pods-SLNativeJSMessage_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = QG479838Q3;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SLNativeJSMessage/SLNativeJSMessage-Prefix.pch";
 				INFOPLIST_FILE = "SLNativeJSMessage/SLNativeJSMessage-Info.plist";
@@ -520,6 +524,7 @@
 			baseConfigurationReference = DD0AFE94C93B8413B2059C5C /* Pods-SLNativeJSMessage_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = QG479838Q3;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SLNativeJSMessage/SLNativeJSMessage-Prefix.pch";
 				INFOPLIST_FILE = "SLNativeJSMessage/SLNativeJSMessage-Info.plist";

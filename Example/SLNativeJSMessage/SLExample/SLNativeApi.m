@@ -14,4 +14,7 @@
     NSLog(@"%@",params);
     callback(nil,@"js 你好");
 }
+- (void)dealloc{
+    NSLog(@"释放了");
+}
 @end

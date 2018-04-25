@@ -9,4 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface SLNativeApi : NSObject
+- (void)sl_helloWorld:(id)params callback:(void(^)(NSError *error,id responseDict))callback;
 @end
