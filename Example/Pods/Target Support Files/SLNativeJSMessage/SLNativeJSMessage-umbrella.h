@@ -11,6 +11,7 @@
 #endif
 
 #import "SLBaseWebViewBridge.h"
+#import "SLJSContextManage.h"
 #import "SLNativeBaseBridge.h"
 
 FOUNDATION_EXPORT double SLNativeJSMessageVersionNumber;

@@ -8,10 +8,13 @@
 
 #import "SLViewController.h"
 #import "SLBaseWebViewBridge.h"
+#import "SLJSContextManage.h"
+#import "SLJSApi.h"
+#import "SLNativeApi.h"
 
 @interface SLViewController ()
 @property (weak, nonatomic) IBOutlet UIWebView *slWebView;
-@property(nonatomic,strong)JSContext * context;
+@property (nonatomic, strong) SLJSContextManage * jsContextManage;
 @end
 
 @implementation SLViewController
@@ -25,8 +28,9 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 -(void)captureJSContext{
-    self.context = [self.slWebView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
-    self.context[@"WebViewBridge"]= [[SLBaseWebViewBridge alloc] init];
+    self.jsContextManage =[[SLJSContextManage alloc] initContextManage:self.slWebView];
+    SLNativeApi *nativeApi =[[SLNativeApi alloc] init];
+    [self.jsContextManage captureJSContextBrige:@protocol(SLJSApi) nativeImp:nativeApi];
 }
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
     return YES;

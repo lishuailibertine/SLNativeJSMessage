@@ -9,8 +9,8 @@
 </body>
 <script type="text/javascript" src="nativeJS.js"></script>
 <script type="text/javascript">
-	_sl_native.callMessage("原生，你好",function callback(argument) {
-		// body...
+	var dic ={"helloWorld":"native，你好"}
+	native.callMessage(dic,function callback(argument) {
 		alert(argument);
 	});
 </script>

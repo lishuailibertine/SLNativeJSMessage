@@ -7,7 +7,8 @@
 
 #import <Foundation/Foundation.h>
 #import "SLNativeBaseBridge.h"
-typedef void (^SLWebbridgeCallback)(id params);
+typedef id (^SLWebbridgeCallback)(id params);
 @interface SLBaseWebViewBridge : NSObject<SLNativeBaseBridge>
 
+- (void)addMethod:(NSString *)methodName callBack:(SLWebbridgeCallback)callback;
 @end

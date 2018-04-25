@@ -1,0 +1,14 @@
+//
+//  SLJSApi.h
+//  SLNativeJSMessage
+//
+//  Created by Touker on 2018/4/25.
+//  Copyright © 2018年 lishuailibertine. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+@protocol SLJSApi <NSObject>
+@required;
+- (void)helloWorld;
+@end
+

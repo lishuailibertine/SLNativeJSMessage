@@ -9,11 +9,11 @@
 		callMessage:function(params,callback){
 			if (!this.isAndroid_ios()){
 				console.log("is iOS phone");
-				window.WebViewBridge.callRouter(params,callback);
+				w._sl_native.callRouter(params,callback);
 			}else{
 				console.log("is Android phone");
 			}
 		}
  	};
- 	w._sl_native =native;
+ 	w.native =native;
 })(window);

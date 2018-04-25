@@ -7,16 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		220E9D5F2A369B568CD39C73055EA1F3 /* SLBaseWebViewBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = BFF4670AD7B45DC775405711EE4C357D /* SLBaseWebViewBridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2A3A94DC8ADE7EECDD95C3750F2AC347 /* SLNativeJSMessage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9423366CA8B2BB0C757245A0565FD05B /* SLNativeJSMessage-dummy.m */; };
+		2AEA50EF5CDCA69AF41057811BE560AE /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 250DCF57EFD8F5AF23E33123E0FCD5CB /* ReplaceMe.m */; };
 		3330CB90CEACECEFABD5E488C4D51D04 /* Pods-SLNativeJSMessage_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B14EBDDFD187FE231A5B5A2CC1926033 /* Pods-SLNativeJSMessage_Example-dummy.m */; };
 		3594F07F45640C40A6BF8F5924CAEA54 /* Pods-SLNativeJSMessage_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D6A831FCC8C321D51809A5AEB2A9DF /* Pods-SLNativeJSMessage_Tests-dummy.m */; };
+		65B78D02EB150254174C87E6C7A91654 /* SLNativeBaseBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = A18FA938ADD7E16D927BC0B7A5403C62 /* SLNativeBaseBridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		69303B865CB41DCEEEF90155B1132B6B /* SLNativeJSMessage-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2488D7317061730D21326BC26A396C18 /* SLNativeJSMessage-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9D43CDC9F18DF6B750C241ABC450947F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		A0A5B178D394604DF8C0BB275CF51416 /* SLNativeJSMessage-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F70F457108195288DEC1A570FC8CFBF4 /* SLNativeJSMessage-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A8855AEE927EB29DA48C4C3007542F96 /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = EDA9B0DA138CA19A8A91FEB263C9853E /* ReplaceMe.m */; };
+		A0CF7B29D1A0F0588BA058634E1324DE /* SLBaseWebViewBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 6746351C0E03354929C7CF0C10CC643B /* SLBaseWebViewBridge.m */; };
 		AA832A1EC90B270ED688529359F30FC6 /* Pods-SLNativeJSMessage_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 62BF9F957CF51723B7C28B661FE7B56A /* Pods-SLNativeJSMessage_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DEE2C7945EA93C6ACDC23362E36130FD /* SLNativeBaseBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = DD1DDA6775FC8B0F7D37E88B9C3AC151 /* SLNativeBaseBridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E24DA0D70BBD3FB948AF4E4C14102E8A /* SLBaseWebViewBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 303439AE7800101F089408DEC7D2AD52 /* SLBaseWebViewBridge.m */; };
+		B67A46082D7C6AE2A2AC522B8D293BB3 /* SLJSContextManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 34158DB62D9DF9314398EDE1AE5A4A7C /* SLJSContextManage.m */; };
+		BF4A9626F31FF79BBD123A840B30402B /* SLBaseWebViewBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = ED3853D372752247FC5FFFB7AC05873C /* SLBaseWebViewBridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E0C6D4E142C131A819BF3F4EEC1C2377 /* SLNativeJSMessage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 340A5A6D3925B48BD5E132035A410355 /* SLNativeJSMessage-dummy.m */; };
+		E2BC8785D2CA27E4F8AFDEAA00F88701 /* SLJSContextManage.h in Headers */ = {isa = PBXBuildFile; fileRef = BDCB122DD874EC1B856C010F90023F0C /* SLJSContextManage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F2BF1FC6D045A61ABC0F4F28C2736CA6 /* Pods-SLNativeJSMessage_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FCD8071C30FA66C6C4E1E32340EFC592 /* Pods-SLNativeJSMessage_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F9D211F6CB0C8CABF47B4ECC682A13C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		FD1315E1FCB721D9D8E9D1FB572A82C0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
@@ -40,40 +42,42 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00217C4DC9A221D88A53B059E3947465 /* SLNativeJSMessage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SLNativeJSMessage-prefix.pch"; sourceTree = "<group>"; };
 		015D9CB1B1A37D0AC37E1148409E7278 /* Pods-SLNativeJSMessage_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SLNativeJSMessage_Example-frameworks.sh"; sourceTree = "<group>"; };
-		303439AE7800101F089408DEC7D2AD52 /* SLBaseWebViewBridge.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SLBaseWebViewBridge.m; path = SLNativeJSMessage/Classes/SLBaseWebViewBridge.m; sourceTree = "<group>"; };
+		1204813D14B1DCD6082F5CCFA3985115 /* SLNativeJSMessage.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SLNativeJSMessage.modulemap; sourceTree = "<group>"; };
+		2488D7317061730D21326BC26A396C18 /* SLNativeJSMessage-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SLNativeJSMessage-umbrella.h"; sourceTree = "<group>"; };
+		250DCF57EFD8F5AF23E33123E0FCD5CB /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ReplaceMe.m; path = SLNativeJSMessage/Classes/ReplaceMe.m; sourceTree = "<group>"; };
+		262B04A127001ED3CAF60107C80AB1A4 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		340A5A6D3925B48BD5E132035A410355 /* SLNativeJSMessage-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SLNativeJSMessage-dummy.m"; sourceTree = "<group>"; };
+		34158DB62D9DF9314398EDE1AE5A4A7C /* SLJSContextManage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SLJSContextManage.m; path = SLNativeJSMessage/Classes/SLJSContextManage.m; sourceTree = "<group>"; };
 		3E8B8251D0F6EBF9F59C74B2B524489C /* Pods-SLNativeJSMessage_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SLNativeJSMessage_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		43237E00D31411BCD7BE1541B4F68300 /* Pods-SLNativeJSMessage_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SLNativeJSMessage_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		477ED6F41D8DC98200AB401DF5F6F1B7 /* SLNativeJSMessage.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = SLNativeJSMessage.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		4C98AE76F8875149BB30CDD178F37C01 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		565226A999438CF3FB5E983DCA30ED89 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		56F5B3C22FD5B90526CAE4CB1187F1FE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		57BCDDEA49F2BE63EEE1A9B56529407A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6198BB6260613ACBC52F402B6CDE8046 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62BF9F957CF51723B7C28B661FE7B56A /* Pods-SLNativeJSMessage_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SLNativeJSMessage_Example-umbrella.h"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6746351C0E03354929C7CF0C10CC643B /* SLBaseWebViewBridge.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SLBaseWebViewBridge.m; path = SLNativeJSMessage/Classes/SLBaseWebViewBridge.m; sourceTree = "<group>"; };
+		69F568CF89E6B46B8E034C51D2E3186D /* SLNativeJSMessage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SLNativeJSMessage.xcconfig; sourceTree = "<group>"; };
 		796F0BB7918B7045AAD35F5A39210523 /* Pods-SLNativeJSMessage_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SLNativeJSMessage_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		866D9ABAB62480D107854A098E771C86 /* Pods_SLNativeJSMessage_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SLNativeJSMessage_Tests.framework; path = "Pods-SLNativeJSMessage_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		885D7D7883B17219342CDB589DDCE332 /* Pods-SLNativeJSMessage_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SLNativeJSMessage_Example-resources.sh"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9423366CA8B2BB0C757245A0565FD05B /* SLNativeJSMessage-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SLNativeJSMessage-dummy.m"; sourceTree = "<group>"; };
 		99171EB3899AA7526E7D2C3B23CC9C28 /* Pods-SLNativeJSMessage_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SLNativeJSMessage_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		A4DC50685E3DFF4FFD730A00AAD73779 /* SLNativeJSMessage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SLNativeJSMessage.xcconfig; sourceTree = "<group>"; };
+		A18FA938ADD7E16D927BC0B7A5403C62 /* SLNativeBaseBridge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SLNativeBaseBridge.h; path = SLNativeJSMessage/Classes/SLNativeBaseBridge.h; sourceTree = "<group>"; };
+		A2B034BD5B1204C92E0F31860AFF5D79 /* SLNativeJSMessage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SLNativeJSMessage-prefix.pch"; sourceTree = "<group>"; };
 		A90B370BCD9710AE20CD42BA0D0575CA /* Pods-SLNativeJSMessage_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SLNativeJSMessage_Tests.modulemap"; sourceTree = "<group>"; };
-		ABD30AF45AD2652481A6993C05326C07 /* SLNativeJSMessage.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SLNativeJSMessage.modulemap; sourceTree = "<group>"; };
 		B14EBDDFD187FE231A5B5A2CC1926033 /* Pods-SLNativeJSMessage_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SLNativeJSMessage_Example-dummy.m"; sourceTree = "<group>"; };
 		BB43593ED28B50A279E4A72E31A6C085 /* Pods_SLNativeJSMessage_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SLNativeJSMessage_Example.framework; path = "Pods-SLNativeJSMessage_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BFF4670AD7B45DC775405711EE4C357D /* SLBaseWebViewBridge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SLBaseWebViewBridge.h; path = SLNativeJSMessage/Classes/SLBaseWebViewBridge.h; sourceTree = "<group>"; };
+		BDCB122DD874EC1B856C010F90023F0C /* SLJSContextManage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SLJSContextManage.h; path = SLNativeJSMessage/Classes/SLJSContextManage.h; sourceTree = "<group>"; };
 		C3332EBF8FA8F90AB1628DFF716DB21E /* Pods-SLNativeJSMessage_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SLNativeJSMessage_Example.release.xcconfig"; sourceTree = "<group>"; };
 		C7D6A831FCC8C321D51809A5AEB2A9DF /* Pods-SLNativeJSMessage_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SLNativeJSMessage_Tests-dummy.m"; sourceTree = "<group>"; };
 		CE26A39FB1FB6E9AA15894B0EDC1877E /* Pods-SLNativeJSMessage_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SLNativeJSMessage_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		D401E929589A4940B5374FA2A0570307 /* Pods-SLNativeJSMessage_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SLNativeJSMessage_Tests-resources.sh"; sourceTree = "<group>"; };
-		D430BE1030BDC99AFAEB68591D33B8A7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		DD1DDA6775FC8B0F7D37E88B9C3AC151 /* SLNativeBaseBridge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SLNativeBaseBridge.h; path = SLNativeJSMessage/Classes/SLNativeBaseBridge.h; sourceTree = "<group>"; };
+		E468382B7119C8948D6530B9BFB72AD5 /* SLNativeJSMessage.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = SLNativeJSMessage.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		E9AC4AC8F2967197BC06E5703911C464 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		EAE2C77E4D0FCD6F58B330EC35AF3904 /* Pods-SLNativeJSMessage_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SLNativeJSMessage_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		EDA9B0DA138CA19A8A91FEB263C9853E /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ReplaceMe.m; path = SLNativeJSMessage/Classes/ReplaceMe.m; sourceTree = "<group>"; };
+		ED3853D372752247FC5FFFB7AC05873C /* SLBaseWebViewBridge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SLBaseWebViewBridge.h; path = SLNativeJSMessage/Classes/SLBaseWebViewBridge.h; sourceTree = "<group>"; };
 		F633B424D6CF18E06E67F31D8156D153 /* Pods-SLNativeJSMessage_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SLNativeJSMessage_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		F70F457108195288DEC1A570FC8CFBF4 /* SLNativeJSMessage-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SLNativeJSMessage-umbrella.h"; sourceTree = "<group>"; };
 		FB7A9BA20EF687C344C0733074F97471 /* Pods-SLNativeJSMessage_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SLNativeJSMessage_Example.modulemap"; sourceTree = "<group>"; };
 		FCD8071C30FA66C6C4E1E32340EFC592 /* Pods-SLNativeJSMessage_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SLNativeJSMessage_Tests-umbrella.h"; sourceTree = "<group>"; };
 		FF5016976C82F94F989052405B8649EC /* SLNativeJSMessage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SLNativeJSMessage.framework; path = SLNativeJSMessage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,20 +112,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1461FD7207611F1095915630F876DBE7 /* SLNativeJSMessage */ = {
-			isa = PBXGroup;
-			children = (
-				EDA9B0DA138CA19A8A91FEB263C9853E /* ReplaceMe.m */,
-				BFF4670AD7B45DC775405711EE4C357D /* SLBaseWebViewBridge.h */,
-				303439AE7800101F089408DEC7D2AD52 /* SLBaseWebViewBridge.m */,
-				DD1DDA6775FC8B0F7D37E88B9C3AC151 /* SLNativeBaseBridge.h */,
-				E735356506D279E60B60B24E1281F24D /* Pod */,
-				7391D449CCEC0455C7C57044681843C0 /* Support Files */,
-			);
-			name = SLNativeJSMessage;
-			path = ../..;
-			sourceTree = "<group>";
-		};
 		2D544F15A36ABD8AEC6A7E03463C945D /* Pods-SLNativeJSMessage_Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,37 +140,37 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		47F34867A0F98EF57445B10346B01B9C /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				1461FD7207611F1095915630F876DBE7 /* SLNativeJSMessage */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		7391D449CCEC0455C7C57044681843C0 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				6198BB6260613ACBC52F402B6CDE8046 /* Info.plist */,
-				ABD30AF45AD2652481A6993C05326C07 /* SLNativeJSMessage.modulemap */,
-				A4DC50685E3DFF4FFD730A00AAD73779 /* SLNativeJSMessage.xcconfig */,
-				9423366CA8B2BB0C757245A0565FD05B /* SLNativeJSMessage-dummy.m */,
-				00217C4DC9A221D88A53B059E3947465 /* SLNativeJSMessage-prefix.pch */,
-				F70F457108195288DEC1A570FC8CFBF4 /* SLNativeJSMessage-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/SLNativeJSMessage";
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				47F34867A0F98EF57445B10346B01B9C /* Development Pods */,
+				860AA95F7DCFBAAB271160EA3CBD2726 /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				35DB29D50F503281298B7DECD1815259 /* Products */,
 				A71E2923D7D9C1BC61CB2116FD19BE7A /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		860AA95F7DCFBAAB271160EA3CBD2726 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FAB28731C6D7BF6B73BBAE4FEC2D9C15 /* SLNativeJSMessage */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		95172C88C99B9A02A965503705FC5FD8 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4C98AE76F8875149BB30CDD178F37C01 /* Info.plist */,
+				1204813D14B1DCD6082F5CCFA3985115 /* SLNativeJSMessage.modulemap */,
+				69F568CF89E6B46B8E034C51D2E3186D /* SLNativeJSMessage.xcconfig */,
+				340A5A6D3925B48BD5E132035A410355 /* SLNativeJSMessage-dummy.m */,
+				A2B034BD5B1204C92E0F31860AFF5D79 /* SLNativeJSMessage-prefix.pch */,
+				2488D7317061730D21326BC26A396C18 /* SLNativeJSMessage-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/SLNativeJSMessage";
 			sourceTree = "<group>";
 		};
 		A71E2923D7D9C1BC61CB2116FD19BE7A /* Targets Support Files */ = {
@@ -226,26 +216,43 @@
 			path = "Target Support Files/Pods-SLNativeJSMessage_Tests";
 			sourceTree = "<group>";
 		};
-		E735356506D279E60B60B24E1281F24D /* Pod */ = {
+		F231D7458294037E3C3DA27942CC8D75 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				D430BE1030BDC99AFAEB68591D33B8A7 /* LICENSE */,
-				56F5B3C22FD5B90526CAE4CB1187F1FE /* README.md */,
-				477ED6F41D8DC98200AB401DF5F6F1B7 /* SLNativeJSMessage.podspec */,
+				262B04A127001ED3CAF60107C80AB1A4 /* LICENSE */,
+				E9AC4AC8F2967197BC06E5703911C464 /* README.md */,
+				E468382B7119C8948D6530B9BFB72AD5 /* SLNativeJSMessage.podspec */,
 			);
 			name = Pod;
+			sourceTree = "<group>";
+		};
+		FAB28731C6D7BF6B73BBAE4FEC2D9C15 /* SLNativeJSMessage */ = {
+			isa = PBXGroup;
+			children = (
+				250DCF57EFD8F5AF23E33123E0FCD5CB /* ReplaceMe.m */,
+				ED3853D372752247FC5FFFB7AC05873C /* SLBaseWebViewBridge.h */,
+				6746351C0E03354929C7CF0C10CC643B /* SLBaseWebViewBridge.m */,
+				BDCB122DD874EC1B856C010F90023F0C /* SLJSContextManage.h */,
+				34158DB62D9DF9314398EDE1AE5A4A7C /* SLJSContextManage.m */,
+				A18FA938ADD7E16D927BC0B7A5403C62 /* SLNativeBaseBridge.h */,
+				F231D7458294037E3C3DA27942CC8D75 /* Pod */,
+				95172C88C99B9A02A965503705FC5FD8 /* Support Files */,
+			);
+			name = SLNativeJSMessage;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		15F3D24CBF24B16E471CEFC4A9C3684E /* Headers */ = {
+		3ACFB1D4D941AA3DB9E672C100218616 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				220E9D5F2A369B568CD39C73055EA1F3 /* SLBaseWebViewBridge.h in Headers */,
-				DEE2C7945EA93C6ACDC23362E36130FD /* SLNativeBaseBridge.h in Headers */,
-				A0A5B178D394604DF8C0BB275CF51416 /* SLNativeJSMessage-umbrella.h in Headers */,
+				BF4A9626F31FF79BBD123A840B30402B /* SLBaseWebViewBridge.h in Headers */,
+				E2BC8785D2CA27E4F8AFDEAA00F88701 /* SLJSContextManage.h in Headers */,
+				65B78D02EB150254174C87E6C7A91654 /* SLNativeBaseBridge.h in Headers */,
+				69303B865CB41DCEEEF90155B1132B6B /* SLNativeJSMessage-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,9 +297,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E409558A359439E7C18F50046E8264 /* Build configuration list for PBXNativeTarget "SLNativeJSMessage" */;
 			buildPhases = (
-				DD7ACC492319AEEA75B1CB4E17C3111A /* Sources */,
+				088984570210354C9F0D249741993FF0 /* Sources */,
 				004653053D22273EE28977DEDEFB6BE9 /* Frameworks */,
-				15F3D24CBF24B16E471CEFC4A9C3684E /* Headers */,
+				3ACFB1D4D941AA3DB9E672C100218616 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -350,6 +357,17 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		088984570210354C9F0D249741993FF0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AEA50EF5CDCA69AF41057811BE560AE /* ReplaceMe.m in Sources */,
+				A0CF7B29D1A0F0588BA058634E1324DE /* SLBaseWebViewBridge.m in Sources */,
+				B67A46082D7C6AE2A2AC522B8D293BB3 /* SLJSContextManage.m in Sources */,
+				E0C6D4E142C131A819BF3F4EEC1C2377 /* SLNativeJSMessage-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		98BB95314104CE50ADD90D3571A03F02 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -363,16 +381,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3330CB90CEACECEFABD5E488C4D51D04 /* Pods-SLNativeJSMessage_Example-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DD7ACC492319AEEA75B1CB4E17C3111A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A8855AEE927EB29DA48C4C3007542F96 /* ReplaceMe.m in Sources */,
-				E24DA0D70BBD3FB948AF4E4C14102E8A /* SLBaseWebViewBridge.m in Sources */,
-				2A3A94DC8ADE7EECDD95C3750F2AC347 /* SLNativeJSMessage-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,7 +404,7 @@
 /* Begin XCBuildConfiguration section */
 		4739C34C2D697880F6787A3FE356F3D0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A4DC50685E3DFF4FFD730A00AAD73779 /* SLNativeJSMessage.xcconfig */;
+			baseConfigurationReference = 69F568CF89E6B46B8E034C51D2E3186D /* SLNativeJSMessage.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -649,7 +657,7 @@
 		};
 		DA08AEC121E85474DF65822811500CD2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A4DC50685E3DFF4FFD730A00AAD73779 /* SLNativeJSMessage.xcconfig */;
+			baseConfigurationReference = 69F568CF89E6B46B8E034C51D2E3186D /* SLNativeJSMessage.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
