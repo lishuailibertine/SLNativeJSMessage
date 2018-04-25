@@ -48,7 +48,7 @@ NSString *const SLAPPIOSBRIDGENAME =@"_sl_native";
         return @{};
     }
     __block id callback;
-    void (*func)(id, SEL, id, id) = (void *)[self methodForSelector:selector];
+    void (*func)(id, SEL, id, id) = (void *)[object methodForSelector:selector];
     dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
     dispatch_async(self.jsContextqueue, ^{
         @try {

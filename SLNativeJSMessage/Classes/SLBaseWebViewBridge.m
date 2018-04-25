@@ -32,12 +32,12 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 SLWebbridgeCallback WebbridgeCallback =[self.methodMap objectForKey:methodName];
                 id arguments =WebbridgeCallback(param);
-                [callBack callWithArguments:arguments];
+                [callBack callWithArguments:@[arguments]];
             });
         }else{
             SLWebbridgeCallback WebbridgeCallback =[self.methodMap objectForKey:methodName];
             id arguments =WebbridgeCallback(param);
-            [callBack callWithArguments:arguments];
+            [callBack callWithArguments:@[arguments]];
         }
     }
 }
