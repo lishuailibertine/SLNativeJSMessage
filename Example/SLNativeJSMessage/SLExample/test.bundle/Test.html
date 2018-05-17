@@ -3,6 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <title>Test</title>
+<script type="text/javascript" src="nativeJS.js"></script>
+<script>
+	function sendMessage(){
+		var input_method_Obj =document.getElementById("methodname");
+		var input_params_Obj =document.getElementById("params");
+		var dic = {input_method_Obj.value:input_params_Obj.value};
+		native.callMessage(dic,function callback(argument) {
+				alert(argument);
+		});
+	}
+</script>
 </head>
 <body>
 <p>测试</p>
@@ -11,17 +22,6 @@ Method name:<br>
 <br>
 Params:<br>
 <input id="params" type="text" name="params">
-<input type="button" value="sendMessage" onclick="sendMessage()">
+<input type="submit" value="sendMessage" onclick="sendMessage()">
 </body>
-<script type="text/javascript" src="nativeJS.js"></script>
-<script type="text/javascript">
-	function sendMessage(){
-		var input_method_Obj =document.getElementById("methodname");
-		var input_params_Obj =document.getElementById("params");
-		var dic ={inputObj.value:input_params_Obj.value}
-		native.callMessage(dic,function callback(argument) {
-				alert(argument);
-		});
-	}
-</script>
 </html>
