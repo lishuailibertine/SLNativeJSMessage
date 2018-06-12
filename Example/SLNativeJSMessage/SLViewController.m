@@ -28,9 +28,9 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 -(void)captureJSContext{
-    self.jsContextManage =[[SLJSContextManage alloc] initContextManage:self.slWebView];
+    self.jsContextManage =[[SLJSContextManage alloc] initContextManageWithWebview:self.slWebView];
     SLNativeApi *nativeApi =[[SLNativeApi alloc] init];
-    [self.jsContextManage captureJSContextBrige:@protocol(SLJSApi) nativeImp:nativeApi];
+    [self.jsContextManage registerRidgeWithRidgeType:SLJSContextManageType_UIWebview jsServer:@protocol(SLJSApi) nativeImp:nativeApi];
 }
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
     return YES;

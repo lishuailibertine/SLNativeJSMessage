@@ -45,4 +45,7 @@
     
     [self.methodMap setObject:callback forKey:methodName];
 }
+- (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message{
+    
+}
 @end
