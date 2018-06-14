@@ -26,6 +26,7 @@
 		C41BAA634221E8FE139AA372 /* Pods_SLNativeJSMessage_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BE24D128337A5D46ABA6C71 /* Pods_SLNativeJSMessage_Tests.framework */; };
 		E56A53FA208D83E200E25C3F /* test.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E56A53F9208D83E200E25C3F /* test.bundle */; };
 		E56A5408209053B100E25C3F /* SLNativeApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E56A5407209053B000E25C3F /* SLNativeApi.m */; };
+		E5713EEF20D25ABF00AB802F /* SLWKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5713EEE20D25ABF00AB802F /* SLWKViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,8 @@
 		E56A54052090536A00E25C3F /* SLJSApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLJSApi.h; sourceTree = "<group>"; };
 		E56A5406209053B000E25C3F /* SLNativeApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLNativeApi.h; sourceTree = "<group>"; };
 		E56A5407209053B000E25C3F /* SLNativeApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLNativeApi.m; sourceTree = "<group>"; };
+		E5713EED20D25ABF00AB802F /* SLWKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLWKViewController.h; sourceTree = "<group>"; };
+		E5713EEE20D25ABF00AB802F /* SLWKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLWKViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +152,7 @@
 		6003F593195388D20070C39A /* Example for SLNativeJSMessage */ = {
 			isa = PBXGroup;
 			children = (
+				E5713EEC20D25A9500AB802F /* WK */,
 				E56A53DC208D6E8500E25C3F /* SLExample */,
 				6003F59C195388D20070C39A /* SLAppDelegate.h */,
 				6003F59D195388D20070C39A /* SLAppDelegate.m */,
@@ -212,6 +216,15 @@
 				E56A5407209053B000E25C3F /* SLNativeApi.m */,
 			);
 			path = SLExample;
+			sourceTree = "<group>";
+		};
+		E5713EEC20D25A9500AB802F /* WK */ = {
+			isa = PBXGroup;
+			children = (
+				E5713EED20D25ABF00AB802F /* SLWKViewController.h */,
+				E5713EEE20D25ABF00AB802F /* SLWKViewController.m */,
+			);
+			path = WK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -377,6 +390,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5713EEF20D25ABF00AB802F /* SLWKViewController.m in Sources */,
 				E56A5408209053B100E25C3F /* SLNativeApi.m in Sources */,
 				6003F59E195388D20070C39A /* SLAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* SLViewController.m in Sources */,
