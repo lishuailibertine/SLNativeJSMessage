@@ -9,7 +9,12 @@
 		callMessage:function(params,callback){
 			if (!this.isAndroid_ios()){
 				console.log("is iOS phone");
-				w._sl_native.callRouter(params,callback);
+				if(typeof w.webkit !=='undefined'){
+					params['callback']=callback;
+					w.webkit.messageHandlers['_sl_native'].postMessage(params);
+				}else{
+					w._sl_native.callRouter(params,callback);
+				}
 			}else{
 				console.log("is Android phone");
 			}

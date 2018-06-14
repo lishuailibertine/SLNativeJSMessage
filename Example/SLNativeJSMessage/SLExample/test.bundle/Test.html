@@ -4,15 +4,16 @@
 <meta charset="UTF-8">
 <title>Test</title>
 <script type="text/javascript" src="nativeJS.js"></script>
-<script>
-	function sendMessage(){
+<script>	
+ window.sendMessage =function(){
+ 		var dic = {};
 		var input_method_Obj =document.getElementById("methodname");
 		var input_params_Obj =document.getElementById("params");
-		var dic = {input_method_Obj.value:input_params_Obj.value};
+		dic[input_method_Obj.value]=input_params_Obj.value;
 		native.callMessage(dic,function callback(argument) {
 				alert(argument);
 		});
-	}
+ };
 </script>
 </head>
 <body>
@@ -22,6 +23,6 @@ Method name:<br>
 <br>
 Params:<br>
 <input id="params" type="text" name="params">
-<input type="submit" value="sendMessage" onclick="sendMessage()">
+<input id="sendMessage" type="button" value="发送" onclick="alert(window.sendMessage())">
 </body>
 </html>
