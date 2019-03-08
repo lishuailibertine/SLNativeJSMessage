@@ -31,13 +31,21 @@
         if (![[NSThread currentThread] isMainThread]) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 SLWebbridgeCallback WebbridgeCallback =[self.methodMap objectForKey:methodName];
-                id arguments =WebbridgeCallback(param);
-                [callBack callWithArguments:@[arguments]];
+                if(WebbridgeCallback ==nil){
+                    [callBack callWithArguments:@[@{@"error":@"method is not found"}]];
+                }else{
+                    id arguments =WebbridgeCallback(param);
+                    [callBack callWithArguments:@[@{@"callback":arguments}]];
+                }
             });
         }else{
             SLWebbridgeCallback WebbridgeCallback =[self.methodMap objectForKey:methodName];
-            id arguments =WebbridgeCallback(param);
-            [callBack callWithArguments:@[arguments]];
+            if(WebbridgeCallback ==nil){
+                [callBack callWithArguments:@[@{@"error":@"method is not found"}]];
+            }else{
+                id arguments =WebbridgeCallback(param);
+                [callBack callWithArguments:@[@{@"callback":arguments}]];
+            }
         }
     }
 }
