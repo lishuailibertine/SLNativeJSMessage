@@ -12,8 +12,8 @@
 #import "SLJSApi.h"
 #import "SLNativeApi.h"
 
-@interface SLViewController ()
-@property (weak, nonatomic) IBOutlet UIWebView *slWebView;
+@interface SLViewController ()<WKNavigationDelegate>
+@property (strong, nonatomic) WKWebView *slWebView;
 @property (nonatomic, strong) SLJSContextManage * jsContextManage;
 @end
 
@@ -21,27 +21,38 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(captureJSContext) name:@"DidCreateContextNotification" object:nil];
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(captureJSContext) name:@"DidCreateContextNotification" object:nil];
     NSString *sourceStr =[[NSBundle bundleForClass:[self class]] pathForResource:@"test" ofType:@"bundle"];
     NSString *path =[NSString stringWithFormat:@"%@/Test.html",sourceStr];
-    [self.slWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:path]]];
+    
+    WKWebViewConfiguration * configuration = [[WKWebViewConfiguration alloc]init];
+    WKUserContentController * user_controller = [[WKUserContentController alloc]init];
+    configuration.userContentController = user_controller;
+    CGRect react = [UIScreen mainScreen].bounds;
+    
+    self.slWebView = [[WKWebView alloc]initWithFrame:react configuration:configuration];
+    [self.view addSubview:self.slWebView];
+    self.slWebView.navigationDelegate = self;
+    [self.slWebView loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:path]]];
 	// Do any additional setup after loading the view, typically from a nib.
-}
--(void)captureJSContext{
-    self.jsContextManage =[[SLJSContextManage alloc] initContextManage:self.slWebView];
+    self.jsContextManage =[[SLJSContextManage alloc] initContextManageWithUserController:user_controller];
     SLNativeApi *nativeApi =[[SLNativeApi alloc] init];
-    [self.jsContextManage captureJSContextBrige:@protocol(SLJSApi) nativeImp:nativeApi];
+    [self.jsContextManage captureJSContextBrigeWithType:SLJSContextManageType_WKWebview jsServer:@protocol(SLJSApi) nativeImp:nativeApi];
 }
-- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
-    return YES;
+- (void)webView:(WKWebView *)webView didFinishNavigation:(null_unspecified WKNavigation *)navigation;
+{
     
 }
-- (void)webViewDidFinishLoad:(UIWebView *)webView{
-    NSLog(@"success");
-}
-- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
-    NSLog(@"error");
-}
+//- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
+//    return YES;
+//
+//}
+//- (void)webViewDidFinishLoad:(UIWebView *)webView{
+//    NSLog(@"success");
+//}
+//- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
+//    NSLog(@"error");
+//}
 @end
 
 @implementation NSObject (hb_uiwebViewDelegator)

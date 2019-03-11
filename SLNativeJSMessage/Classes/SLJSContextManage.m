@@ -2,7 +2,7 @@
 //  SLJSContextManage.m
 //  Pods-SLNativeJSMessage_Example
 //
-//  Created by Touker on 2018/4/25.
+//  Created by lishuai on 2018/4/25.
 //
 
 #import "SLJSContextManage.h"
@@ -13,6 +13,7 @@ NSString *const SLAPPIOSBRIDGENAME =@"_sl_native";
 @interface SLJSContextManage()
 @property (nonatomic,strong)JSContext *jsContext;
 @property(nonatomic)dispatch_queue_t jsContextqueue;
+@property (nonatomic, strong) WKUserContentController *userController;
 @end
 
 @implementation SLJSContextManage
@@ -26,7 +27,13 @@ NSString *const SLAPPIOSBRIDGENAME =@"_sl_native";
     }
     return self;
 }
-- (void)captureJSContextBrige:(Protocol *)jsServer nativeImp:(id)nativeImp{
+- (instancetype)initContextManageWithUserController:(WKUserContentController *)userController{
+    if (self =[super init]) {
+        self.userController =userController;
+    }
+    return self;
+}
+- (void)captureJSContextBrigeWithType:(SLJSContextManageType)jsContextManageType jsServer:(Protocol *)jsServer nativeImp:(id)nativeImp;{
     SLBaseWebViewBridge * webViewBridge =[[SLBaseWebViewBridge alloc] init];
     unsigned int numberOfMethods = 0;
     struct objc_method_description *methodDescriptions = protocol_copyMethodDescriptionList(jsServer, YES, YES, &numberOfMethods);
@@ -38,7 +45,12 @@ NSString *const SLAPPIOSBRIDGENAME =@"_sl_native";
         };
         [webViewBridge addMethod:selector_name callBack:WebbridgeCallback];
     }
-    self.jsContext[SLAPPIOSBRIDGENAME] = webViewBridge;
+    if(jsContextManageType==SLJSContextManageType_UIWebview){
+        self.jsContext[SLAPPIOSBRIDGENAME] = webViewBridge;
+    }else{
+        [self.userController addScriptMessageHandler:webViewBridge name:SLAPPIOSBRIDGENAME];
+    }
+    free(methodDescriptions);
 }
 #pragma mark --private
 - (id)SyncHandleNativeServer:(id)object name:(NSString *)selectorName params:(id)params{

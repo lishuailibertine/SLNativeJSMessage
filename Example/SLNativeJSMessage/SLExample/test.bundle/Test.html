@@ -1,31 +1,3 @@
-<!---->
-<!--<html>-->
-<!--<head>-->
-<!--<meta charset="UTF-8">-->
-<!--<title>Test</title>-->
-<!--</head>-->
-<!--<script type="text/javascript">-->
-<!--    function sendMessage(){-->
-<!--        var input_method_Obj =document.getElementById("methodname");-->
-<!--        var input_params_Obj =document.getElementById("params");-->
-<!--        var dic ={inputObj.value:input_params_Obj.value}-->
-<!--        native.callMessage(dic,function callback(argument) {-->
-<!--                           alert(argument);-->
-<!--                           });-->
-<!--    }-->
-<!--</script>-->
-<!--<body>-->
-<!--<p>测试</p>-->
-<!--Method name:<br>-->
-<!--<input id="methodname" type="text" name="methodname">-->
-<!--<br>-->
-<!--Params:<br>-->
-<!--<input id="params" type="text" name="params">-->
-<!--<input type="button" value="sendMessage" onclick="sendMessage()">-->
-<!--</body>-->
-<!--<script type="text/javascript" src="nativeJS.js"></script>-->
-<!--</html>-->
-<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -35,9 +7,8 @@
             function sendMessage(){
                 var input_method_Obj =document.getElementById("methodname");
                 var input_params_Obj =document.getElementById("params");
-                var dic ={"helloWorld":{"key":"value"}}
-                native.callMessage(dic,function callback(argument) {
-                console.log(argument)
+                native.callMessage("helloWorld",{"key":"value"},function callback(argument) {
+                    alert(argument);
               });
             }
         </script>
@@ -52,5 +23,6 @@
         <input type="button" value="sendMessage"  id="submit" onclick="sendMessage()">
     </body>
 </html>
+
 
 

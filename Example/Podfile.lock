@@ -1,5 +1,5 @@
 PODS:
-  - SLNativeJSMessage (0.1.0)
+  - SLNativeJSMessage (0.1.1)
 
 DEPENDENCIES:
   - SLNativeJSMessage (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SLNativeJSMessage: 266ca99fa3ac0d0086d2a1620a265f32af0b1c3d
+  SLNativeJSMessage: 4007baaa6eba0280f2a95e32609768b54fd472e7
 
 PODFILE CHECKSUM: 513e15ef6c11b67679dbb009f61591ab9f2edd75
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3
