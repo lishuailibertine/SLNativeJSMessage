@@ -87,4 +87,9 @@ NSString *const SLAPPIOSBRIDGENAME =@"_sl_native";
     }
     return _jsContextqueue;
 }
+- (void)dealloc{
+    if (self.userController) {
+        [self.userController removeScriptMessageHandlerForName:SLAPPIOSBRIDGENAME];
+    }
+}
 @end

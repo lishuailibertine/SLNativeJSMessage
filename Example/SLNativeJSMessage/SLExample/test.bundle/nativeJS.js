@@ -1,4 +1,4 @@
-(function test(w) {
+(function nativeJSMessage(w) {
 	var native ={
 		isAndroid_ios:function(){  
 			var u = navigator.userAgent, app = navigator.appVersion;  
@@ -14,7 +14,7 @@
 				Method :method,
 				Params :params
             };
-            var callbackName ="sl_iOS"+"_"+Date.now();
+            var callbackName =method+"_"+Date.now();
             w[callbackName] =function(argument){
             	callback(argument);
             	delete w[callbackName];
