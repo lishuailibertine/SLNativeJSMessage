@@ -7,8 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-@protocol SLJSApi <NSObject>
+@protocol SLJSApiBase <NSObject>
 @required;
 - (void)helloWorld;
+@end
+@protocol SLJSApi <SLJSApiBase>
+@required;
+- (void)helloWorldA;
 @end
 
