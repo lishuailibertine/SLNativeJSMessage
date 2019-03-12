@@ -1,4 +1,5 @@
 (function nativeJSMessage(w) {
+	var _native_iOS_Obj ="_sl_native"
 	var native ={
 		isAndroid_ios:function(){  
 			var u = navigator.userAgent, app = navigator.appVersion;  
@@ -23,13 +24,14 @@
 			if (!this.isAndroid_ios()){
 				console.log("is iOS phone");
 				if(this.check_webkit()){
-					w.webkit.messageHandlers._sl_native.postMessage(input)
+					w.webkit.messageHandlers[_native_iOS_Obj].postMessage(input)
 				}else{
 					w._sl_native.callRouter(input,callback);
 				}
 				
 			}else{
 				console.log("is Android phone");
+				window.addroid[method](params);
 			}
 		}
  	};
