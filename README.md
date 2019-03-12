@@ -9,9 +9,9 @@
 2、需要一个管理JS上下文的类，这个类与webview打交道，除了注册我们业务层需要的功能，它还负责把h5的消息传递给原生;
 # 通信组件通过时序图去说明
 
-![图片描述](/tfl/pictures/201903/tapd_personalword_1122510671001000642_1552299219_66.jpg)
+![图片描述](https://github.com/lishuailibertine/SLNativeJSMessage/blob/master/Prepare.jpg)
 
-![图片描述](/tfl/pictures/201903/tapd_personalword_1122510671001000642_1552299237_46.jpg)
+![图片描述](https://github.com/lishuailibertine/SLNativeJSMessage/blob/master/SendMessage.jpg)
 
 # 通信组件在h5端如何使用
 
