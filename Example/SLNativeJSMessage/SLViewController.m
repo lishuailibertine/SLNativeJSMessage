@@ -21,6 +21,7 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
+    //ceshi4
 //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(captureJSContext) name:@"DidCreateContextNotification" object:nil];
     NSString *sourceStr =[[NSBundle bundleForClass:[self class]] pathForResource:@"test" ofType:@"bundle"];
     NSString *path =[NSString stringWithFormat:@"%@/Test.html",sourceStr];
