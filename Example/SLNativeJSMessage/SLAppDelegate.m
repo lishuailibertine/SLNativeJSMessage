@@ -14,6 +14,7 @@
 {
     // Override point for customization after application launch.
     //ceshi1
+    //ceshi2
     return YES;
 }
 
